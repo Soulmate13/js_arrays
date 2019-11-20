@@ -48,6 +48,18 @@ let chequeCount = function (_cheque) {
 
 // Получение самой дорогой покупки в чеке;
 
+// let chequeMax = function (_cheque) {
+//     let max;
+//     max = _cheque[0].price * _cheque[0].count;
 
+//     for (i = 0; i < _cheque.length; i++) {
+//         if ((_cheque[i + 1].price * _cheque[i + 1].count) > (_cheque[i].price * _cheque[i].count) {
+//             max = _cheque[i + 1].price * _cheque[i + 1].count;
+//         };
+//     };
+
+//     document.getElementById("desk3").innerHTML = `<pre>The max is ${sum}</pre>`
+
+// }
 
 // Подсчет средней стоимости одного товара в чеке.
