@@ -48,18 +48,38 @@ let chequeCount = function (_cheque) {
 
 // Получение самой дорогой покупки в чеке;
 
-// let chequeMax = function (_cheque) {
-//     let max;
-//     max = _cheque[0].price * _cheque[0].count;
+let chequeMax = function (_cheque) {
+    let max;
+    max = _cheque[0].price * _cheque[0].count;
 
-//     for (i = 0; i < _cheque.length; i++) {
-//         if ((_cheque[i + 1].price * _cheque[i + 1].count) > (_cheque[i].price * _cheque[i].count) {
-//             max = _cheque[i + 1].price * _cheque[i + 1].count;
-//         };
-//     };
+    let buff;
+    buff = `${_cheque[0].name} is the most expensive with the price of ${max}`;
 
-//     document.getElementById("desk3").innerHTML = `<pre>The max is ${sum}</pre>`
+    for (i = 0; i < _cheque.length; i++) {
+        if ((_cheque[i].price * _cheque[i].count) > max) {
+            max = _cheque[i].price * _cheque[i].count;
+            buff = `${_cheque[i].name} is the most expensive with the price of ${max}`
+        };
+    };
 
-// }
+    document.getElementById("desk3").innerHTML = `<pre>${buff}</pre>`
+
+}
 
 // Подсчет средней стоимости одного товара в чеке.
+
+let averageCheque = function (_cheque) {
+
+    let totalPrice = 0;
+
+    for (let i = 0; i < _cheque.length; i++) {
+        totalPrice += (_cheque[i].price * _cheque[i].count)
+    }
+
+    let averagePrice;
+
+    averagePrice = totalPrice / _cheque.length;
+
+    document.getElementById("desk4").innerHTML = `<pre>The average price of 1 item is ${averagePrice.toFixed(3)}</pre>`
+
+}
