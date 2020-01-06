@@ -44,15 +44,12 @@ let DisplayList = function () {
 let shoppingListAdd = function (_shoppingList) {
 
     let _item = prompt("What do you want to add to the shopping list?")
-    let present = true;
+    let present = false;
 
     for (i = 0; i < _shoppingList.length; i++) {
         if (_item.toUpperCase() === _shoppingList[i].name.toUpperCase()) {
             _shoppingList[i].count = _shoppingList[i].count + 1;
             present = true;
-            break;
-        } else {
-            present = false;
         }
     };
 
